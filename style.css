@@ -1,0 +1,268 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body { 
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.9) 0%, rgba(195, 207, 226, 0.9) 100%), 
+                url('classroom-background.jpg') center/cover no-repeat fixed; 
+    padding: 20px; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    flex: 1;
+}
+
+header { 
+    text-align: center; 
+    margin-bottom: 30px; 
+    position: relative;
+}
+
+h1 { 
+    color: #2c3e50; 
+    margin-bottom: 10px; 
+    text-align: center;
+    padding: 10px 0;
+}
+
+.card { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    margin-bottom: 20px; 
+}
+
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+    color: #2c3e50; 
+}
+
+input, select { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+}
+
+button { 
+    background: #3498db; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    margin-right: 10px; 
+}
+
+button:hover { 
+    background: #2980b9; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+th, td { 
+    padding: 12px; 
+    text-align: left; 
+    border-bottom: 1px solid #ddd; 
+}
+
+th { 
+    background: #f8f9fa; 
+}
+
+.actions button { 
+    padding: 5px 10px; 
+    margin-right: 5px; 
+}
+
+.delete { 
+    background: #e74c3c; 
+}
+
+.delete:hover { 
+    background: #c0392b; 
+}
+
+.hidden { 
+    display: none; 
+}
+
+.tabs { 
+    display: flex; 
+    margin-bottom: 20px; 
+}
+
+.tab { 
+    padding: 10px 20px; 
+    background: #ddd; 
+    cursor: pointer; 
+    border-radius: 4px 4px 0 0; 
+    margin-right: 5px; 
+}
+
+.tab.active { 
+    background: #3498db; 
+    color: white; 
+}
+
+/* Menu Button Styles */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.menu-button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+}
+
+.menu-button:hover {
+    background: #1a252f;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    width: 200px;
+    z-index: 100;
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a:hover {
+    background: #f5f7fa;
+}
+
+/* Profile Image Styles */
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3498db;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Error message styling */
+.error {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Multi-select styling */
+.multi-select {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.multi-select label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.multi-select input {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* Address counter */
+.char-counter {
+    text-align: right;
+    font-size: 0.8em;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* Add Student button above table */
+.add-student-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.add-student-btn {
+    background: #27ae60;
+}
+
+.add-student-btn:hover {
+    background: #219653;
+}
+
+/* Success message */
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: none;
+}
